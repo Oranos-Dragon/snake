@@ -1,0 +1,26 @@
+* {
+    font-family: verdana;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0092cc
+}
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,50px);
+    background-color: #00c210;
+    border: #007a0a solid 15px;
+}
+
+
+.box {
+    border: #007a0a solid 1px;
+}
+

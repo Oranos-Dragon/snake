@@ -1,0 +1,31 @@
+.overlay {
+    position:absolute;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay > h1 {
+    border: #007a0a solid 5px;
+    font-size: 80px;
+    background-color: #860497;
+    margin-bottom: 200px;
+}
+
+.play-button {
+    border: #007a0a solid 5px;
+    background-color: #860497;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.play-button:hover {
+    background-color: #b600ce;
+    color: black;
+}
