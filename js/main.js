@@ -5,22 +5,10 @@ let snakeBody = [21];
 let score = 0;
 let highscore = 0;
 let direction = 2;
-let grid = 
-[0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-];
+
 
 
 let applePosition = 54;
-grid[applePosition] = 2;
 let position = 22;
 
 document.addEventListener('keydown', function(event) {

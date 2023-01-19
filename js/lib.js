@@ -23,7 +23,7 @@ function apple() {
         apple()
     }
     boxes[applePosition].innerHTML = '<img src="/img/apple.png" alt="">';
-    grid[applePosition - 1] = 2
+    
 }
 
 function eatApple() {
@@ -38,7 +38,7 @@ function up() {
         gameOver()
     }    
     else {
-        grid[position] = 0;
+        
         boxes[position].innerHTML = " "
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = " ";
@@ -46,6 +46,9 @@ function up() {
         snakeBody.pop();
         snakeBody.unshift(position);
         position -= 10;
+        if (snakeBody.includes(position)) {
+            gameOver()
+        }
         boxes[position].innerHTML = '<img src="/img/snake_head_up.png" alt="">';
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = '<img src="/img/snake_body.png" alt="">';
@@ -53,7 +56,7 @@ function up() {
         if (applePosition == position) {
             eatApple()
         };
-        grid[position] = 1;
+        
         direction = 1;
     }
 }
@@ -62,7 +65,7 @@ function right() {
         gameOver()
     }
     else {
-        grid[position] = 0;
+        
         boxes[position].innerHTML = " ";
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = " ";
@@ -70,6 +73,9 @@ function right() {
         snakeBody.pop();
         snakeBody.unshift(position);
         position++;
+        if (snakeBody.includes(position)) {
+            gameOver()
+        }
         boxes[position].innerHTML = '<img src="/img/snake_head_right.png" alt="">';
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = '<img src="/img/snake_body.png" alt="">';
@@ -77,7 +83,7 @@ function right() {
         if (applePosition == position) {
             eatApple()
         };
-        grid[position] = 1 ; 
+        
         direction = 2;
     }
 }
@@ -86,7 +92,7 @@ function down() {
         gameOver()
     } 
     else {
-        grid[position] = 0;
+        
         boxes[position].innerHTML = " ";
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = " ";
@@ -94,6 +100,9 @@ function down() {
         snakeBody.pop();
         snakeBody.unshift(position);
         position += 10;
+        if (snakeBody.includes(position)) {
+            gameOver()
+        }
         boxes[position].innerHTML = '<img src="/img/snake_head_down.png" alt="">';
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = '<img src="/img/snake_body.png" alt="">';
@@ -101,7 +110,7 @@ function down() {
         if (applePosition == position) {
             eatApple()
         };
-        grid[position] = 1;
+        
         direction = 3;
     }
 }
@@ -110,7 +119,7 @@ function left() {
         gameOver()
     }
     else {
-        grid[position] = 0;
+        
         boxes[position].innerHTML = " ";
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = " ";
@@ -118,6 +127,9 @@ function left() {
         snakeBody.pop();
         snakeBody.unshift(position);
         position--;
+        if (snakeBody.includes(position)) {
+            gameOver()
+        }
         boxes[position].innerHTML = '<img src="/img/snake_head_left.png" alt="">';
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = '<img src="/img/snake_body.png" alt="">';
@@ -125,7 +137,7 @@ function left() {
         if (applePosition == position) {
             eatApple()
         };
-        grid[position] = 1;
+        
         direction = 4
     }
 }
