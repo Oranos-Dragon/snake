@@ -1,5 +1,11 @@
 function gameOver() {
-    console.log("L bozo")
+    clearInterval(snakeMove);
+    restart.style.visibility = "visible";
+    gameover = true;
+}
+
+function restartButton() {
+    location.reload()
 }
 
 function snakeMoving() {
@@ -18,19 +24,19 @@ function snakeMoving() {
 }
 
 function apple() {
-    applePosition = Math.floor(Math.random()*100)
+    applePosition = Math.floor(Math.random()*100);
     while (applePosition == position || snakeBody.includes(applePosition)) {
-        apple()
+        apple();
     }
     boxes[applePosition].innerHTML = '<img src="/img/apple.png" alt="">';
     
 }
 
 function eatApple() {
-    console.log("apple eaten")
-    snakeBody.push(snakeBody[snakeBody.length-1])
-    apple()
-
+    console.log("apple eaten");
+    snakeBody.push(snakeBody[snakeBody.length-1]);
+    apple();
+    scoreUpdate()
 }
 
 function up() {
@@ -38,7 +44,6 @@ function up() {
         gameOver()
     }    
     else {
-        
         boxes[position].innerHTML = " "
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = " ";
@@ -56,7 +61,6 @@ function up() {
         if (applePosition == position) {
             eatApple()
         };
-        
         direction = 1;
     }
 }
@@ -83,7 +87,6 @@ function right() {
         if (applePosition == position) {
             eatApple()
         };
-        
         direction = 2;
     }
 }
@@ -110,7 +113,6 @@ function down() {
         if (applePosition == position) {
             eatApple()
         };
-        
         direction = 3;
     }
 }
@@ -119,7 +121,6 @@ function left() {
         gameOver()
     }
     else {
-        
         boxes[position].innerHTML = " ";
         for(i=0;i<snakeBody.length;i++) {
             boxes[snakeBody[i]].innerHTML = " ";
@@ -137,7 +138,16 @@ function left() {
         if (applePosition == position) {
             eatApple()
         };
-        
         direction = 4
+    }
+}
+
+function scoreUpdate() {
+    score++;
+    scoreDisplay.innerHTML = score;
+    if (score > highscore) {
+        highscore = score;
+        highscoreDisplay.innerHTML = highscore;
+        localStorage.setItem("highscore", highscore)
     }
 }

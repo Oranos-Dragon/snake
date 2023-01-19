@@ -1,3 +1,35 @@
 .box > img {
     width: 48px;
 }
+
+.side {
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 50px 50px 100px;
+    background-color: #00c210;
+    border: #007a0a solid 15px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 535px 150px;
+}
+
+.overlay {
+    position:absolute;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.restart {
+    border: #007a0a solid 5px;
+    font-size: 80px;
+    background-color: #d40707;
+    margin-bottom: 200px;
+    visibility: hidden;
+}
