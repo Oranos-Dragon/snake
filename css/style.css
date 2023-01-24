@@ -17,6 +17,7 @@ body {
     grid-template-rows: repeat(10,50px);
     background-color: #00c210;
     border: #007a0a solid 15px;
+    border-radius: 10px;
 }
 
 .box {

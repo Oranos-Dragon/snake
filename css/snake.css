@@ -2,6 +2,7 @@
     width: 48px;
 }
 
+
 .side {
     width: 160px;
     height: 200px;
@@ -9,6 +10,7 @@
     grid-template-rows: 50px 50px 100px;
     background-color: #00c210;
     border: #007a0a solid 15px;
+    border-radius: 10px;
 }
 
 body {
