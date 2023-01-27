@@ -51,7 +51,7 @@ function apple() {
 }
 
 function eatApple() {
-    console.log("apple eaten");
+    // console.log("apple eaten");
     snakeBody.push(snakeBody[snakeBody.length-1]);//1 vakje word toegevoegd aan de slang
     apple();
     scoreUpdate()
