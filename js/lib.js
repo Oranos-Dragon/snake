@@ -23,7 +23,7 @@ function snakePlace() {
         gameOver();
     }
     for(i=0;i<snakeBody.length;i++) {//zet het lichaam wee terug
-        boxes[snakeBody[i]].innerHTML = '<img src="/img/snake_body.png" alt="">';
+        boxes[snakeBody[i]].innerHTML = '<img src="img/snake_body.png" alt="">';
     }
 }
 
@@ -47,7 +47,7 @@ function apple() {
     while (applePosition == position || snakeBody.includes(applePosition)) {
         apple();
     }
-    boxes[applePosition].innerHTML = '<img src="/img/apple.png" class="apple" alt="">';//zet de appel neer 
+    boxes[applePosition].innerHTML = '<img src="img/apple.png" class="apple" alt="">';//zet de appel neer 
 }
 
 function eatApple() {
@@ -66,7 +66,7 @@ function up() {
         snakeRemove();
         position -= 10;
         snakePlace();
-        boxes[position].innerHTML = '<img src="/img/snake_head_up.png" alt="">';//plaatst hoofd
+        boxes[position].innerHTML = '<img src="img/snake_head_up.png" alt="">';//plaatst hoofd
         if (applePosition == position) {
             eatApple();
         };
@@ -81,7 +81,7 @@ function right() {
         snakeRemove();
         position++;
         snakePlace();
-        boxes[position].innerHTML = '<img src="/img/snake_head_right.png" alt="">';//plaatst hoofd
+        boxes[position].innerHTML = '<img src="img/snake_head_right.png" alt="">';//plaatst hoofd
         if (applePosition == position) {
             eatApple();
         };
@@ -96,7 +96,7 @@ function down() {
         snakeRemove();
         position += 10;
         snakePlace();
-        boxes[position].innerHTML = '<img src="/img/snake_head_down.png" alt="">';//plaatst hoofd
+        boxes[position].innerHTML = '<img src="img/snake_head_down.png" alt="">';//plaatst hoofd
         if (applePosition == position) {
             eatApple();
         }
@@ -111,7 +111,7 @@ function left() {
         snakeRemove();
         position--;
         snakePlace();
-        boxes[position].innerHTML = '<img src="/img/snake_head_left.png" alt="">';//plaatst hoofd
+        boxes[position].innerHTML = '<img src="img/snake_head_left.png" alt="">';//plaatst hoofd
         if (applePosition == position) {
             eatApple();
         }
